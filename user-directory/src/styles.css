@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #f4f6f8;
+  color: #1f2933;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.header h1 {
+  margin: 0 0 4px;
+}
+
+.header p {
+  margin: 0 0 24px;
+  color: #52606d;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #e1e5ea;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.search {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #c4cdd5;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.search:focus {
+  outline: 2px solid #2f6fed;
+  outline-offset: 1px;
+}
+
+.user-list,
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 6px;
+  text-align: left;
+  background: #ffffff;
+  border: 1px solid #e1e5ea;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.user-item:hover {
+  background: #f4f6f8;
+}
+
+.user-item.active {
+  border-color: #2f6fed;
+  background: #eaf1ff;
+}
+
+.user-name {
+  font-weight: 600;
+}
+
+.user-email,
+.user-company {
+  font-size: 13px;
+  color: #52606d;
+}
+
+.panel h2 {
+  margin: 0 0 4px;
+}
+
+.subtitle {
+  margin: 0 0 16px;
+  color: #52606d;
+}
+
+.post {
+  padding: 14px 0;
+  border-top: 1px solid #e1e5ea;
+}
+
+.post h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.post p {
+  margin: 0;
+  color: #3e4c59;
+  line-height: 1.5;
+}
+
+.message {
+  color: #52606d;
+  padding: 8px 0;
+}
+
+.error {
+  color: #b42318;
+}
+
+button {
+  font: inherit;
+}
+
+@media (max-width: 720px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

@@ -9,13 +9,22 @@ export const AssessmentDetails = () => {
 const [assessmentName, setAssessmentName] = useState('')
 const [assessmentType, setAssessmentType] = useState('')
 const [duration, setDuration] = useState('')
+const [errors, setErrors] = useState({})
 const handleCreateAssessment = () => {
-  if (!assessmentName || !assessmentType || !duration) {
-    alert('Please fill in all the fields')
-    return
-  }
 
-  alert('Assessment Created Successfully!')
+    const newErrors = {}
+
+    if (!assessmentName.trim()) {
+        newErrors.assessmentName = 'Please enter an assessment name'
+    }
+
+    setErrors(newErrors)
+
+    if (Object.keys(newErrors).length > 0) {
+        return
+    }
+
+    alert('Assessment Created Successfully!')
 }
 
   return (
@@ -30,6 +39,11 @@ const handleCreateAssessment = () => {
             value={assessmentName}
             onChange={(e) =>setAssessmentName(e.target.value)}
         />
+        {errors.assessmentName && (
+        <p style={{ color: 'red' }}>
+        {errors.assessmentName}</p>
+)}
+        
 
         <p>Assessment Name: {assessmentName}</p>
         <br/>
@@ -46,6 +60,9 @@ const handleCreateAssessment = () => {
         <option value="MCQ">MCQ</option>
         <option value="exam">Examination</option>
         </select>
+
+
+        
         <p>Assessment Type: {assessmentType}</p>
         
         <br/>
