@@ -1,0 +1,51 @@
+.assessment-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.assessment-container h2 {
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group label {
+  font-weight: 600;
+}
+
+.assessment-container button {
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.assessment-container button:hover {
+  background-color: #1d4ed8;
+}
